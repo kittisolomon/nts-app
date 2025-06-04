@@ -1,11 +1,24 @@
 import express, { type Request, Response, NextFunction } from "express";
 import { registerRoutes } from "./routes";
 import { setupDevServer, serveStatic, log } from "./vite";
+import cors from "cors";
 
+const allowedOrigins = ["https://nts-app.vercel.app"];
 const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-
+app.use(
+  cors({
+    origin: function (origin, callback) {
+      if (!origin || allowedOrigins.includes(origin)) {
+        callback(null, true);
+      } else {
+        callback(new Error("Not allowed by CORS"));
+      }
+    },
+    credentials: true,
+  })
+);
 app.use((req, res, next) => {
   const start = Date.now();
   const path = req.path;
