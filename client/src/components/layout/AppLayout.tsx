@@ -9,13 +9,13 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
   const closeSidebar = () => setSidebarOpen(false);
 
   return (
-    <div className="flex h-screen overflow-hidden">
+    <div className="min-h-screen flex">
       <Sidebar isOpen={sidebarOpen} onClose={closeSidebar} />
       
-      <div className="flex-1 overflow-auto lg:ml-64">
+      <div className="flex-1 flex flex-col min-h-screen">
         <Header onToggleSidebar={toggleSidebar} />
         
-        <main className="p-6">
+        <main className="flex-1 p-6 overflow-auto">
           {children}
         </main>
       </div>

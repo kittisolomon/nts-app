@@ -14,8 +14,6 @@ export const users = pgTable("users", {
   corporateId: integer("corporate_id"),
 });
 
-
-
 // Security agencies
 export const agencies = pgTable("agencies", {
   id: serial("id").primaryKey(),
