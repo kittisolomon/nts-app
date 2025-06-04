@@ -44,19 +44,19 @@ export default function ReportsAnalytics() {
   const [reportType, setReportType] = useState("all");
 
   const { data: manifests, isLoading: isLoadingManifests } = useQuery({
-    queryKey: ['/api/manifests'],
+    queryKey: ['https://nts-app.onrender.com/api/manifests'],
   });
   
   const { data: vehicles, isLoading: isLoadingVehicles } = useQuery({
-    queryKey: ['/api/vehicles'],
+    queryKey: ['https://nts-app.onrender.com/api/vehicles'],
   });
   
   const { data: parks, isLoading: isLoadingParks } = useQuery({
-    queryKey: ['/api/parks'],
+    queryKey: ['https://nts-app.onrender.com/api/parks'],
   });
   
   const { data: trafficReports, isLoading: isLoadingTrafficReports } = useQuery({
-    queryKey: ['/api/traffic-reports'],
+    queryKey: ['https://nts-app.onrender.com/api/traffic-reports'],
   });
   
   // Calculate summary stats

@@ -20,7 +20,7 @@ export default function Violations() {
   const [isViewDialogOpen, setIsViewDialogOpen] = useState(false);
 
   const { data: violations, isLoading } = useQuery<Violation[]>({
-    queryKey: ['/api/violations'],
+    queryKey: ['https://nts-app.onrender.com/api/violations'],
   });
 
   // Implement filtering for violations

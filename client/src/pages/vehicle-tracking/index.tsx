@@ -15,7 +15,7 @@ export default function VehicleTracking() {
   const [filterRoute, setFilterRoute] = useState("all");
 
   const { data: vehicles, isLoading } = useQuery<Vehicle[]>({
-    queryKey: ['/api/vehicles'],
+    queryKey: ['https://nts-app.onrender.com/api/vehicles'],
   });
 
   const filteredVehicles = vehicles ? vehicles.filter(vehicle => {

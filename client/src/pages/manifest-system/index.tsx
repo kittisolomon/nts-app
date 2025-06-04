@@ -19,7 +19,7 @@ export default function ManifestSystem() {
   const [isQRDialogOpen, setIsQRDialogOpen] = useState(false);
 
   const { data: manifests, isLoading } = useQuery<Manifest[]>({
-    queryKey: ['/api/manifests'],
+    queryKey: ['https://nts-app.onrender.com/api/manifests'],
   });
 
   const filteredManifests = manifests ? manifests.filter(manifest => {

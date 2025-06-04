@@ -10,31 +10,31 @@ import ParksTable from "@/components/dashboard/ParksTable";
 
 export default function Dashboard() {
   const { data: stats, isLoading: isLoadingStats } = useQuery({
-    queryKey: ['/api/dashboard/stats'],
+    queryKey: ['https://nts-app.onrender.com/api/dashboard/stats'],
   });
 
   const { data: vehicles, isLoading: isLoadingVehicles } = useQuery({
-    queryKey: ['/api/vehicles/active'],
+    queryKey: ['https://nts-app.onrender.com/api/vehicles/active'],
   });
   
   const { data: parks, isLoading: isLoadingParks } = useQuery({
-    queryKey: ['/api/parks'],
+    queryKey: ['https://nts-app.onrender.com/api/parks'],
   });
   
   const { data: manifests, isLoading: isLoadingManifests } = useQuery({
-    queryKey: ['/api/manifests/recent'],
+    queryKey: ['https://nts-app.onrender.com/api/manifests/recent'],
   });
   
   const { data: trafficReports, isLoading: isLoadingTrafficReports } = useQuery({
-    queryKey: ['/api/traffic-reports'],
+    queryKey: ['https://nts-app.onrender.com/api/traffic-reports'],
   });
   
   const { data: securityAlerts, isLoading: isLoadingSecurityAlerts } = useQuery({
-    queryKey: ['/api/security-alerts/recent'],
+    queryKey: ['https://nts-app.onrender.com/api/security-alerts/recent'],
   });
   
   const { data: agencies, isLoading: isLoadingAgencies } = useQuery({
-    queryKey: ['/api/agencies'],
+    queryKey: ['https://nts-app.onrender.com/api/agencies'],
   });
 
   return (

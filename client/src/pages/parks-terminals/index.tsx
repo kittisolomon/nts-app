@@ -17,7 +17,7 @@ export default function ParksTerminals() {
   const [regionFilter, setRegionFilter] = useState("all");
 
   const { data: parks, isLoading } = useQuery<Park[]>({
-    queryKey: ['/api/parks'],
+    queryKey: ['https://nts-app.onrender.com/api/parks'],
   });
 
   const filteredParks = parks ? parks.filter(park => {

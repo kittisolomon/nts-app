@@ -12,7 +12,7 @@ export default function TrafficMonitoring() {
   const [timeRange, setTimeRange] = useState("24h");
   
   const { data: trafficReports, isLoading } = useQuery<TrafficReport[]>({
-    queryKey: ['/api/traffic-reports'],
+    queryKey: ['https://nts-app.onrender.com/api/traffic-reports'],
   });
 
   // Sort traffic reports by congestion level and vehicle count

@@ -19,11 +19,11 @@ export default function SecurityIntegration() {
   const [isViewDialogOpen, setIsViewDialogOpen] = useState(false);
 
   const { data: agencies, isLoading: isLoadingAgencies } = useQuery<Agency[]>({
-    queryKey: ['/api/agencies'],
+    queryKey: ['https://nts-app.onrender.com/api/agencies'],
   });
 
   const { data: securityAlerts, isLoading: isLoadingAlerts } = useQuery<SecurityAlert[]>({
-    queryKey: ['/api/security-alerts'],
+    queryKey: ['https://nts-app.onrender.com/api/security-alerts'],
   });
 
   // Implement filtering for alerts

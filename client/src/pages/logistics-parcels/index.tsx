@@ -18,7 +18,7 @@ export default function LogisticsParcels() {
   const [isViewDialogOpen, setIsViewDialogOpen] = useState(false);
 
   const { data: parcels, isLoading } = useQuery<Parcel[]>({
-    queryKey: ['/api/parcels'],
+    queryKey: ['https://nts-app.onrender.com/api/parcels'],
   });
 
   // Implement filtering for parcels
